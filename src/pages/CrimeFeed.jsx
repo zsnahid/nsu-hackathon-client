@@ -3,14 +3,27 @@ import { BiDownvote, BiUpvote } from "react-icons/bi";
 import { MdOutlineModeComment } from "react-icons/md";
 import { PiShareFatLight } from "react-icons/pi";
 import Comments from "../components/comments";
+import Filtering from "../components/Filtering";
+import Sorting from "../components/Sorting";
+import Search from "../components/Search";
 
 export default function CrimeFeed() {
   return (
     <div class="grid grid-cols-3">
       {/* first grid */}
-      <div class="col-span-1 rounded"></div>
+      <div class="col-span-1 rounded flex flex-col gap-4">
+        <div>
+          <Filtering />
+        </div>
+        <div>
+          <Sorting />
+        </div>
+        <div>
+          <Search />
+        </div>
+      </div>
 
-      {/* second grid- Fm space */}
+      {/* second grid */}
       <div class="col-span-1 bg-white shadow-lg rounded-lg p-4">
         {/* user info */}
         <div class="flex items-center space-x-2">
