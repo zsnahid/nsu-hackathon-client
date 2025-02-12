@@ -49,7 +49,7 @@ export default function AuthProvider({ children }) {
       {}
     );
     recaptchaVerifier.render();
-    return signInWithPhoneNumber(auth, number, recaptchaVerifier)
+    return signInWithPhoneNumber(auth, number, recaptchaVerifier);
   };
 
   const authUtils = {

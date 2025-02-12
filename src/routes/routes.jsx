@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root";
+import VerifyOTP from "../components/VerifyOTP";
 import CrimeFeed from "../pages/CrimeFeed";
+import EditProfile from "../pages/EditProfile";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import UserProfile from "../pages/UserProfile";
-import VerifyOTP from "../components/VerifyOTP";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "/verify-otp",
         element: <VerifyOTP />,
+      },
+      {
+        path: "/edit-profile",
+        element: <EditProfile />,
       },
     ],
   },
