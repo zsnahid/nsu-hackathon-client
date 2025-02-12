@@ -5,18 +5,33 @@ import {
   Navbar,
   Typography,
 } from "@material-tailwind/react";
-import React from "react";
+import axios from "axios";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../contexts/AuthContext";
 import { AvatarWithUserDropdown } from "./AvatarWithUserDropdown";
 
 export default function NavbarAfterLogin() {
   const [openNav, setOpenNav] = React.useState(false);
+  const { user, loading } = useContext(AuthContext);
+
+  const [currentUser, setCurrentUser] = useState(null);
 
   React.useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/users/${user?.email}`)
+      .then((res) => {
+        console.log(res);
+        setCurrentUser(res.data);
+      })
+      .catch((err) => console.error(err));
   }, []);
 
   const navList = (
