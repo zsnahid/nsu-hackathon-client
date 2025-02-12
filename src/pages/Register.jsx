@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useContext, useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
@@ -36,6 +37,23 @@ export default function Register() {
         updateUserProfile(userInfo)
           .then(() => {})
           .catch((err) => console.error(err));
+      })
+      .catch((err) => console.error(err));
+
+    const userData = {
+      user_name: name,
+      user_email: email,
+      phone_number: phone_number,
+      is_verified: "No",
+      role: "user",
+      profile_photo_url: "",
+      created_at: new Date().toLocaleString("en-GB"),
+    };
+
+    axios
+      .post(`http://localhost:3000/users/${email}`, userData)
+      .then((res) => {
+        console.log(res);
       })
       .catch((err) => console.error(err));
   };
