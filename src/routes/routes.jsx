@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import UserProfile from "../pages/UserProfile";
 import VerifyOTP from "../components/VerifyOTP";
+import CrimePost from "../pages/CrimePost";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "/verify-otp",
         element: <VerifyOTP />,
+      },
+      {
+        path: "/report",
+        element: <CrimePost />,
       },
     ],
   },
