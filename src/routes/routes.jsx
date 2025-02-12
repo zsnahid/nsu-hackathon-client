@@ -5,7 +5,10 @@ import CrimeFeed from "../pages/CrimeFeed";
 import EditProfile from "../pages/EditProfile";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import UserProfile from "../pages/UserProfile";
+import UserProfile from "../pages/UserProfil
+import VerifyOTP from "../components/VerifyOTP";
+import CrimePost from "../pages/CrimePost";
+
 
 export const router = createBrowserRouter([
   {
