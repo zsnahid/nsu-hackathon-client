@@ -29,7 +29,7 @@ export default function CrimeFeed() {
         </div>
 
         {/* interaction */}
-        <div class="flex gap-2">
+        <div class="flex justify-between">
           <button class="flex items-center space-x-1 text-gray-600">
             <BiUpvote />
             <span class="text-sm">361</span>
@@ -45,6 +45,12 @@ export default function CrimeFeed() {
             <PiShareFatLight />
             <span class="text-sm">Share</span>
           </button>
+
+          {/* Post Verification Score */}
+          <div className="text-sm text-gray-600">
+            <span className="font-medium">Post Verification Score:</span>{" "}
+            <span className="font-bold text-green-600">87%</span>
+          </div>
         </div>
 
         <div class="mt-5">
