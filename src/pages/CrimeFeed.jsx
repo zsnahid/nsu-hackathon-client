@@ -72,7 +72,27 @@ export default function CrimeFeed() {
       </div>
 
       {/* third grid */}
-      <div class="col-span-3"></div>
+      <div class="col-span-1 bg-white shadow-lg rounded-lg p-4">
+        <h2 class="text-xl font-semibold text-gray-700 mb-4">Latest Report</h2>
+
+        <div class="flex items-center space-x-2 mb-4">
+          <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
+          <p class="text-sm text-gray-600 font-semibold">
+            Foysal • <span class="text-gray-400">22 hr. ago</span>
+          </p>
+        </div>
+
+        <div class="mb-4">
+          <h3 class="text-lg font-bold">
+            What would you say is the most overrated web dev tool right now?
+          </h3>
+          <img
+            src="/src/assets/dev-img.jpg"
+            alt="Latest report"
+            className="w-24 h-24 object-cover rounded"
+          />
+        </div>
+      </div>
     </div>
   );
 }
